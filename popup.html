@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scoura</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Scoura</h1>
+  <div id="auth-buttons">
+    <button id="login-btn">Login</button>
+    <button id="logout-btn" style="display: none;">Logout</button>
+  </div>
+  <form id="researchForm" style="display: none;">
+       <label for="name">Name:</label>
+       <input type="text" id="name" required>
+       
+       <label for="keywords">Keywords (comma-separated):</label>
+       <input type="text" id="keywords" required>
+       
+       <label for="linkedinUrl">LinkedIn URL:</label>
+       <input type="url" id="linkedinUrl">
+       
+       <label for="twitterUrl">Twitter URL:</label>
+       <input type="url" id="twitterUrl">
+       
+       <label for="youtubeUrl">YouTube URL:</label>
+       <input type="url" id="youtubeUrl">
+       
+       <button type="submit">Scour</button>
+     </form>
+     <div id="results"></div>
+     <script src="popup.js"></script>
+   </body>
+   </html>

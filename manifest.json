@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Scoura",
+    "version": "0.1.0",
+    "description": "Research tool for salespeople to gather prospect information",
+    "permissions": [
+      "identity",
+      "activeTab"
+    ],
+    "oauth2": {
+      "client_id": "948149461521-pb5ggl56jrtgd9hvje6kt13b32n3ufgn.apps.googleusercontent.com",
+      "scopes": [
+        "https://www.googleapis.com/auth/userinfo.email"
+      ]
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
