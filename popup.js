@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Show the loading message
         loadingDiv.style.display = 'block';
+        resultsDiv.style.display = 'none'; // Hide the results div
         resultsDiv.innerHTML = '';
         console.log('Loading message displayed.');
 
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!token) {
                 console.error('No token found in storage.');
                 loadingDiv.style.display = 'none';
+                resultsDiv.style.display = 'block';
                 resultsDiv.innerHTML = '<p>Error: No token found in storage.</p>';
                 return;
             }
@@ -84,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Error during fetch:', error);
                 // Hide the loading message
                 loadingDiv.style.display = 'none';
+                resultsDiv.style.display = 'block';
                 // Display the error message
                 resultsDiv.innerHTML = `<p>Error: ${error.message}</p>`;
             });
@@ -91,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function displayResults(data, resultsDiv) {
+        resultsDiv.style.display = 'block'; // Show the results div
         let htmlContent = `
             <h2>Person: ${data.person}</h2>
             <h3>Summary</h3>

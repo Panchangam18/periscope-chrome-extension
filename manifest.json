@@ -14,7 +14,11 @@
         "https://www.googleapis.com/auth/userinfo.email"
       ]
     },
+    "icons": {
+      "128": "icons/perrylogojustthat.png"
+    },
     "action": {
+      "default_icon": "icons/perrylogojustthat.png",
       "default_popup": "popup.html"
     },
     "background": {
